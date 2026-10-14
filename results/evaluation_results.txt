@@ -1,0 +1,18 @@
+==================================================
+HASIL EVALUASI MODEL ORAL CANCER DETECTION
+Tanggal: 2025-07-16 03:08:34
+==================================================
+
+Model: ResNet50 (Fine-tuned)
+Total Test Samples: 254
+Overall Accuracy: 81.50%
+
+Confusion Matrix:
+[[ 94  11]
+ [ 36 113]]
+
+Detailed Metrics:
+Sensitivity (Recall): 75.84%
+Specificity: 89.52%
+Precision: 91.13%
+F1-Score: 82.78%

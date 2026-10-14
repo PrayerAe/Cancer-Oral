@@ -1,0 +1,433 @@
+/* Mobile First Responsive Design */
+
+/* Extra Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1199.98px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .floating-cards {
+        height: 300px;
+    }
+    
+    .feature-card {
+        min-width: 180px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991.98px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .floating-cards {
+        display: none;
+    }
+    
+    .card-body-premium {
+        padding: var(--spacing-lg);
+    }
+    
+    .patient-info-section {
+        padding: var(--spacing-lg);
+    }
+    
+    .image-upload-section {
+        padding: var(--spacing-lg);
+    }
+    
+    .upload-area-premium {
+        min-height: 250px;
+        padding: var(--spacing-lg);
+    }
+    
+    .upload-requirements {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .probability-cards {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--spacing-md);
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-premium {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .metadata-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .card-header-premium {
+        padding: var(--spacing-lg);
+    }
+    
+    .card-header-premium h3 {
+        font-size: 1.5rem;
+    }
+    
+    .card-body-premium {
+        padding: var(--spacing-md);
+    }
+    
+    .patient-info-section {
+        padding: var(--spacing-md);
+    }
+    
+    .image-upload-section {
+        padding: var(--spacing-md);
+    }
+    
+    .upload-area-premium {
+        min-height: 200px;
+        padding: var(--spacing-md);
+    }
+    
+    .upload-icon-container {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .upload-icon {
+        font-size: 2rem;
+    }
+    
+    .upload-title {
+        font-size: 1.2rem;
+    }
+    
+    .upload-description {
+        font-size: 1rem;
+    }
+    
+    .results-header {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+    
+    .result-prediction {
+        font-size: 2.5rem;
+    }
+    
+    .result-confidence {
+        font-size: 1.2rem;
+    }
+    
+    .result-icon {
+        font-size: 3rem;
+    }
+    
+    .results-body {
+        padding: var(--spacing-lg);
+    }
+    
+    .analysis-images .image-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .analysis-image {
+        height: 250px;
+    }
+    
+    .feature-card-premium {
+        padding: var(--spacing-lg);
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .disclaimer-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .loading-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .neural-network {
+        width: 150px;
+    }
+    
+    .analysis-steps {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .step {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
+    
+    .notification {
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+        max-width: none;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    body {
+        padding-top: 60px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+    }
+    
+    .form-section-title {
+        font-size: 1.1rem;
+    }
+    
+    .form-control-premium {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .btn-premium {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: 1rem;
+        min-width: auto;
+    }
+    
+    .upload-area-premium {
+        min-height: 180px;
+        padding: var(--spacing-sm);
+    }
+    
+    .upload-icon-container {
+        width: 50px;
+        height: 50px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .upload-icon {
+        font-size: 1.5rem;
+    }
+    
+    .upload-title {
+        font-size: 1.1rem;
+    }
+    
+    .upload-description {
+        font-size: 0.9rem;
+    }
+    
+    .upload-requirements {
+        font-size: 0.8rem;
+    }
+    
+    .result-prediction {
+        font-size: 2rem;
+    }
+    
+    .result-confidence {
+        font-size: 1.1rem;
+    }
+    
+    .result-icon {
+        font-size: 2.5rem;
+    }
+    
+    .prob-value {
+        font-size: 1.5rem;
+    }
+    
+    .analysis-image {
+        height: 200px;
+    }
+    
+    .loading-title {
+        font-size: 1.5rem;
+    }
+    
+    .loading-subtitle {
+        font-size: 1rem;
+    }
+    
+    .ai-animation {
+        height: 80px;
+    }
+    
+    .neural-network {
+        width: 120px;
+        height: 40px;
+    }
+    
+    .node {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .notification {
+        top: 70px;
+        right: 5px;
+        left: 5px;
+    }
+    
+    .notification-content {
+        padding: var(--spacing-md);
+        font-size: 0.9rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .footer,
+    .hero-section,
+    .features-section,
+    .loading-section,
+    .btn-premium,
+    .action-buttons {
+        display: none !important;
+    }
+    
+    .results-section {
+        padding: 0;
+    }
+    
+    .results-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .analysis-image {
+        max-height: 300px;
+        break-inside: avoid;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        padding-top: 0;
+    }
+    
+    .medical-disclaimer {
+        background: #f9f9f9 !important;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #000000;
+        --secondary-color: #333333;
+        --accent-color: #0066cc;
+        --success-color: #006600;
+        --danger-color: #cc0000;
+        --warning-color: #cc6600;
+    }
+    
+    .upload-area-premium {
+        border-color: var(--primary-color);
+    }
+    
+    .form-control-premium {
+        border-color: var(--primary-color);
+    }
+    
+    .btn-premium {
+        border: 2px solid var(--primary-color);
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .feature-card,
+    .neural-network .node,
+    .neural-network .connection {
+        animation: none !important;
+    }
+}

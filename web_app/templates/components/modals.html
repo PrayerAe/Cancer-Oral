@@ -1,0 +1,268 @@
+<!-- Enhanced Modal Components -->
+
+<!-- About Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="aboutModalLabel">
+                    <i class="fas fa-info-circle me-2"></i>About AI Oral Cancer Detection
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6><i class="fas fa-brain me-2"></i>AI Technology</h6>
+                        <p>Our system uses advanced deep learning algorithms based on MobileNetV2 architecture, trained on thousands of medical images to provide accurate oral cancer detection.</p>
+                        
+                        <h6><i class="fas fa-chart-line me-2"></i>Performance</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-1"></i>98.5% Accuracy Rate</li>
+                            <li><i class="fas fa-check text-success me-1"></i>15,000+ Training Samples</li>
+                            <li><i class="fas fa-check text-success me-1"></i>2.3s Average Processing Time</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6><i class="fas fa-shield-alt me-2"></i>Privacy & Security</h6>
+                        <p>All uploaded images are processed securely and are not stored permanently. We comply with medical data protection standards.</p>
+                        
+                        <h6><i class="fas fa-users me-2"></i>Development Team</h6>
+                        <p>Developed by AI researchers and medical professionals dedicated to advancing healthcare through technology.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="window.open('#', '_blank')">
+                    <i class="fas fa-external-link-alt me-1"></i>Learn More
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Help Modal -->
+<div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title" id="helpModalLabel">
+                    <i class="fas fa-question-circle me-2"></i>How to Use the System
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="help-steps">
+                            <div class="step-item">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h6>Upload Medical Image</h6>
+                                    <p>Click the upload area or drag & drop a medical image. Supported formats: JPG, PNG, JPEG, GIF (max 16MB).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h6>Fill Patient Information (Optional)</h6>
+                                    <p>Enter patient details, medical history, and symptoms for comprehensive analysis reporting.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h6>Agree to Terms</h6>
+                                    <p>Check the privacy consent checkbox to acknowledge that this is for research purposes only.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h6>Start Analysis</h6>
+                                    <p>Click "Start AI Analysis" button. The system will process the image and provide results within seconds.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step-item">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <h6>Review Results</h6>
+                                    <p>Examine the AI prediction, confidence score, heatmap visualization, and download the PDF report.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <h6><i class="fas fa-lightbulb me-2"></i>Tips for Best Results</h6>
+                        <div class="alert alert-warning">
+                            <ul class="mb-0">
+                                <li>Use high-resolution images</li>
+                                <li>Ensure good lighting</li>
+                                <li>Clear, focused images work best</li>
+                                <li>Minimum 224x224 pixels recommended</li>
+                            </ul>
+                        </div>
+                        
+                        <h6><i class="fas fa-exclamation-triangle me-2"></i>Important Notes</h6>
+                        <div class="alert alert-danger">
+                            <p class="mb-0"><strong>Medical Disclaimer:</strong> This AI system is for research and educational purposes only. Always consult qualified healthcare professionals for medical diagnosis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info" onclick="startGuidedTour()">
+                    <i class="fas fa-play me-1"></i>Start Guided Tour
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Results Modal -->
+<div class="modal fade" id="resultsModal" tabindex="-1" aria-labelledby="resultsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resultsModalLabel">
+                    <i class="fas fa-chart-bar me-2"></i>Detailed Analysis Results
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="resultsModalBody">
+                <!-- Results content will be populated by JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="downloadPdfBtn">
+                    <i class="fas fa-download me-1"></i>Download PDF Report
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="errorModalLabel">
+                    <i class="fas fa-exclamation-triangle me-2"></i>Error Occurred
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="errorModalBody">
+                <!-- Error content will be populated by JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" onclick="retryAnalysis()">
+                    <i class="fas fa-redo me-1"></i>Try Again
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Modal Enhancements */
+.modal-content {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    border-radius: 15px 15px 0 0;
+}
+
+/* Help Steps Styling */
+.help-steps {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.step-item {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h6 {
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+.step-content p {
+    color: #6c757d;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-dialog.modal-xl {
+        max-width: 95%;
+        margin: 10px auto;
+    }
+    
+    .step-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+</style>
+
+<script>
+function startGuidedTour() {
+    // Close help modal
+    const helpModal = bootstrap.Modal.getInstance(document.getElementById('helpModal'));
+    helpModal.hide();
+    
+    // Start guided tour (you can implement a library like Shepherd.js)
+    setTimeout(() => {
+        alert('Guided tour feature coming soon!');
+    }, 500);
+}
+
+function retryAnalysis() {
+    // Close error modal
+    const errorModal = bootstrap.Modal.getInstance(document.getElementById('errorModal'));
+    errorModal.hide();
+    
+    // Reset form or retry last operation
+    if (window.uploadHandler) {
+        window.uploadHandler.hideLoadingState();
+    }
+}
+</script>

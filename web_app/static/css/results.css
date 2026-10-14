@@ -1,0 +1,459 @@
+/* Enhanced Results Styling */
+.results-container-enhanced {
+    padding: 2rem 0;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Results Header */
+.results-header-enhanced {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid #dee2e6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.results-header-enhanced.cancer-result {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border-color: #ffc107;
+}
+
+.results-header-enhanced.non-cancer-result {
+    background: linear-gradient(135deg, #d1edff 0%, #a7d8f0 100%);
+    border-color: #007bff;
+}
+
+.result-icon-large {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.cancer-result .result-icon-large {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+
+.non-cancer-result .result-icon-large {
+    background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.result-prediction-large {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #2c3e50;
+}
+
+/* Confidence Bar */
+.confidence-bar-container {
+    margin: 1rem 0;
+}
+
+.confidence-bar-background {
+    width: 100%;
+    height: 12px;
+    background: #e9ecef;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.confidence-bar-fill {
+    height: 100%;
+    transition: width 1.5s ease-out;
+    background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+}
+
+.confidence-bar-fill.very-high {
+    background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+}
+
+.confidence-bar-fill.high {
+    background: linear-gradient(90deg, #17a2b8 0%, #007bff 100%);
+}
+
+.confidence-bar-fill.medium {
+    background: linear-gradient(90deg, #ffc107 0%, #fd7e14 100%);
+}
+
+.confidence-bar-fill.low {
+    background: linear-gradient(90deg, #fd7e14 0%, #dc3545 100%);
+}
+
+.confidence-bar-fill.very-low {
+    background: linear-gradient(90deg, #dc3545 0%, #c82333 100%);
+}
+
+/* Result Cards */
+.results-cards-section {
+    margin: 2rem 0;
+}
+
+.result-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.result-card .card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem;
+    font-weight: 600;
+    border: none;
+}
+
+.result-card .card-body {
+    padding: 1.5rem;
+}
+
+/* Probability Chart */
+.probability-chart {
+    space-y: 1rem;
+}
+
+.prob-item {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.prob-bar {
+    height: 30px;
+    border-radius: 15px;
+    transition: width 1s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.prob-item.non-cancer .prob-bar {
+    background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+}
+
+.prob-item.cancer .prob-bar {
+    background: linear-gradient(90deg, #dc3545 0%, #c82333 100%);
+}
+
+.prob-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* Risk Assessment */
+.risk-indicator {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.risk-indicator.high-risk {
+    background: rgba(220, 53, 69, 0.1);
+    color: #721c24;
+    border: 2px solid #dc3545;
+}
+
+.risk-indicator.medium-risk {
+    background: rgba(255, 193, 7, 0.1);
+    color: #856404;
+    border: 2px solid #ffc107;
+}
+
+.risk-indicator.low-risk {
+    background: rgba(40, 167, 69, 0.1);
+    color: #155724;
+    border: 2px solid #28a745;
+}
+
+.risk-indicator.uncertain {
+    background: rgba(108, 117, 125, 0.1);
+    color: #495057;
+    border: 2px solid #6c757d;
+}
+
+.risk-indicator i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.risk-level {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.recommendation-item {
+    padding: 0.25rem 0;
+    color: #6c757d;
+}
+
+/* Metadata Grid */
+.metadata-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.metadata-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.metadata-item:last-child {
+    border-bottom: none;
+}
+
+.metadata-item .label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.metadata-item .value {
+    color: #6c757d;
+    font-family: monospace;
+}
+
+/* Visualization Section */
+.visualization-section {
+    margin: 3rem 0;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.analysis-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.image-wrapper:hover .image-overlay {
+    opacity: 1;
+}
+
+/* Recommendations Section */
+.recommendations-section {
+    margin: 3rem 0;
+}
+
+.recommendations-list {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.recommendations-list li {
+    margin-bottom: 0.5rem;
+    color: #495057;
+}
+
+.recommendation-cta {
+    padding: 1rem;
+}
+
+/* Actions Section */
+.actions-section {
+    margin: 3rem 0;
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.actions-section .btn {
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.actions-section .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Disclaimer Section */
+.disclaimer-section {
+    margin: 2rem 0;
+}
+
+.disclaimer-section .alert {
+    border-radius: 15px;
+    border-left: 5px solid #dc3545;
+}
+
+/* Notifications */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1060;
+    min-width: 300px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.notification-content {
+    background: white;
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notification-success .notification-content {
+    border-left: 4px solid #28a745;
+    color: #155724;
+}
+
+.notification-error .notification-content {
+    border-left: 4px solid #dc3545;
+    color: #721c24;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0.25rem;
+    margin-left: 1rem;
+}
+
+.notification-close:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .results-container-enhanced {
+        padding: 1rem 0;
+    }
+    
+    .results-header-enhanced {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .result-prediction-large {
+        font-size: 2rem;
+    }
+    
+    .result-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .analysis-image {
+        max-width: 200px;
+    }
+    
+    .actions-section .btn {
+        margin-bottom: 0.5rem;
+    }
+    
+    .notification {
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .results-header-enhanced {
+        padding: 1rem;
+    }
+    
+    .result-prediction-large {
+        font-size: 1.5rem;
+    }
+    
+    .result-icon-large {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .visualization-section {
+        padding: 1rem;
+    }
+    
+    .analysis-image {
+        max-width: 150px;
+    }
+}

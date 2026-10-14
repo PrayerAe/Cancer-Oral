@@ -1,0 +1,36 @@
+==================================================
+HASIL EVALUASI FINAL MODEL ORAL CANCER DETECTION
+Tanggal: 2025-07-07 17:33:11
+File Model: DenseNet121_best_model_20250707.pth
+==================================================
+
+Model Arsitektur: DenseNet121 (Fine-tuned)
+Total Sampel Uji: 99
+Akurasi Keseluruhan: 50.51%
+
+Confusion Matrix:
+[[50, 0],
+ [49, 0]]
+
+  - True Negatives (TN): 50
+  - False Positives (FP): 0
+  - False Negatives (FN): 49
+  - True Positives (TP): 0
+
+Metrik Detail:
+  - Sensitivity (Recall): 0.00%
+  - Specificity: 100.00%
+  - Precision: 0.00%
+  - F1-Score: 0.00%
+
+==================================================
+CLASSIFICATION REPORT
+==================================================
+              precision    recall  f1-score   support
+
+  Non-Cancer       0.51      1.00      0.67        50
+      Cancer       0.00      0.00      0.00        49
+
+    accuracy                           0.51        99
+   macro avg       0.25      0.50      0.34        99
+weighted avg       0.26      0.51      0.34        99

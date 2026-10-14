@@ -1,0 +1,30 @@
+# Dokumen PDF
+docs/
+
+# Dataset dan checkpoint besar
+dataset/
+models/checkpoints/
+
+# README
+README.md
+**/README.md
+
+# Environment / secrets
+.env
+.env.local
+.env.production
+**/.env.local
+**/.env.production
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Node / Next.js
+node_modules/
+.next/
+
+# Dokumen lain
+*.docx
+*.pdf
