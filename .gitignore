@@ -1,13 +1,6 @@
-# Dokumen PDF
-docs/
-
 # Dataset dan checkpoint besar
 dataset/
 models/checkpoints/
-
-# README
-README.md
-**/README.md
 
 # Environment / secrets
 .env
@@ -25,6 +18,3 @@ __pycache__/
 node_modules/
 .next/
 
-# Dokumen lain
-*.docx
-*.pdf
